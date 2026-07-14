@@ -7,11 +7,41 @@
     <title>main</title>
     <link rel="stylesheet" href="./src/style.css">
   </head>
-  <body>
+  <body class="bg-neutral-900 text-neutral-0 font-Dmsans-variable">
+
+    <header class="max-w-[1400px] mx-auto ">
+      <nav class="flex justify-between px-4 py-6 relative">
+        <img src="./assets/images/logo.svg" alt="">
+        <div class="">
+          <button class="bg-neutral-700 rounded-lg px-6 py-2 before:inline-block gap-2 
+          flex items-center before:h-5 before:content-[url('/assets/images/icon-units.svg')]">Units</button> 
+        <div class="absolute right-1 mt-1">
+          <ul class="bg-neutral-700 ">
+            <li>
+              <p>Temperature</p>
+              <button>Celsius (&deg;C)</button>
+              <button>Fahrenheit (&deg;F)</button>
+            </li>
+            <li>
+              <p>Wind Speed</p>
+              <button>km/h</button>
+              <button>mph</button>
+            </li>
+            <li>
+              <p>Precipitation</p>
+              <button>Millimeters (mm)</button>
+              <button>Fahrenheit Inches (in)</button>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </nav>
+    </header>
+
 
     
 
 
-    
+    <script module src="./src/main.js"></script>
   </body>
 </html>
