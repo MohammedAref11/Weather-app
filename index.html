@@ -9,15 +9,70 @@
   </head>
   <body class="bg-neutral-900 text-neutral-0 font-Dmsans-variable">
 
-    <header class="max-w-[1400px] mx-auto">
-      <nav class="">
+    <header class="max-w-[1400px] mx-auto font-medium">
+      <nav class="py-4 px-4 flex justify-between max-[351px]:flex-col relative">
         <a href="index.html">
-        <img class="" src="./assets/images/logo.svg" alt="Weather Now Home">
+        <img class="" src="./assets/images/logo.svg" alt="Weather Now Home" width="180" height="50">
         </a>
+        <button id="unitsBtn" class="bg-neutral-800 px-5 py-2 flex gap-1 items-center rounded-lg
+         hover:bg-neutral-700 cursor-pointer self-end
+        after:inline-block after:h-6 after:content-[url('/assets/images/icon-dropdown.svg')]
+        before:inline-block before:h-5 before:content-[url('/assets/images/icon-units.svg')]">Units</button>
+        <div class="absolute right-4 mt-13 max-[351px]:mt-22 select-none">
+          <div id="menu" class="bg-neutral-800 opacity-0 invisible pointer-events-none
+          transition-all duration-250 transform -translate-y-4 ease-out 
+           px-2 py-1 rounded-lg border-b-2 border-neutral-700">
+            <button class="bg-neutral-800 pr-11 py-2 pl-2 flex gap-1 rounded-lg hover:bg-neutral-700 cursor-pointer">Swtich to Imperial</button>
 
-        
+            <fieldset>
+              <legend class="text-neutral-300 pl-1">Temperature</legend>
+              <div class="pl-2 flex rounded-lg hover:bg-neutral-700">
+                <input class="peer appearance-none" type="radio" name="temp" id="cel" value="celsius" checked>
+                <label class="py-2 flex justify-between after:px-2 cursor-pointer
+                after:content-[url('/assets/images/icon-checkmark.svg')] w-full after:invisible
+                peer-checked:after:visible" for="cel">Celsius (&deg;C)</label>
+              </div>
+              <div class="pl-2 flex rounded-lg hover:bg-neutral-700">
+                <input class="peer appearance-none" type="radio" name="temp" id="feh" value="fehrenheit">
+                <label class="py-2 flex justify-between after:px-2 cursor-pointer 
+                after:content-[url('/assets/images/icon-checkmark.svg')] w-full after:invisible
+                peer-checked:after:visible" for="feh">Fehrenheit (&deg;F)</label>
+              </div>
+            </fieldset>
 
+            <fieldset>
+              <legend class="text-neutral-300 pl-1">Wind Speed</legend>
+              <div class="pl-2 flex rounded-lg hover:bg-neutral-700">
+                <input class="peer appearance-none" type="radio" name="wind" id="km" value="km/h" checked>
+                <label class="py-2 flex justify-between after:px-2 cursor-pointer
+                after:content-[url('/assets/images/icon-checkmark.svg')] w-full after:invisible
+                peer-checked:after:visible" for="km">km/h</label>
+              </div>
+              <div class="pl-2 flex rounded-lg hover:bg-neutral-700">
+                <input class="peer appearance-none" type="radio" name="wind" id="mph" value="mph">
+                <label class="py-2 flex justify-between after:px-2 cursor-pointer 
+                after:content-[url('/assets/images/icon-checkmark.svg')] w-full after:invisible
+                peer-checked:after:visible" for="mph">Fehrenheit (&deg;F)</label>
+              </div>
+            </fieldset>
 
+            <fieldset>
+              <legend class="text-neutral-300 pl-1">Precipitation</legend>
+              <div class="pl-2 flex rounded-lg hover:bg-neutral-700">
+                <input class="peer appearance-none" type="radio" name="per" id="mm" value="millimeters" checked>
+                <label class="py-2 flex justify-between after:px-2 cursor-pointer
+                after:content-[url('/assets/images/icon-checkmark.svg')] w-full after:invisible
+                peer-checked:after:visible" for="mm">Millimeters (mm)</label>
+              </div>
+              <div class="pl-2 flex rounded-lg hover:bg-neutral-700">
+                <input class="peer appearance-none" type="radio" name="per" id="in" value="inches">
+                <label class="py-2 flex justify-between after:px-2 cursor-pointer 
+                after:content-[url('/assets/images/icon-checkmark.svg')] w-full after:invisible
+                peer-checked:after:visible" for="in">Inches (in)</label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
       </nav>
     </header>
 
