@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview", 
     "predeploy": "npm run build", 
-    "deploy": "gh-pages -d dist -m \"removed navbar unit dropdown menu because it was not accessiable fixing it tomorrow\""
+    "deploy": "gh-pages -d dist -m \"fixed dropdown menu bug via adding type `module' to script file on index.html\""
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
