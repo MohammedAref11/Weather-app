@@ -5,13 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>main</title>
-    <script type="module" crossorigin src="/Weather-app/assets/index-Cx612T1z.js"></script>
-    <link rel="stylesheet" crossorigin href="/Weather-app/assets/index-C2bo2BuN.css">
+    <script type="module" crossorigin src="/Weather-app/assets/index-B0aouTgy.js"></script>
+    <link rel="stylesheet" crossorigin href="/Weather-app/assets/index-B9PjrD4s.css">
   </head>
   <body class="bg-neutral-900 text-neutral-0 font-Dmsans-variable">
 
     <header class="max-w-[1400px] mx-auto font-medium">
-      <nav class="py-4 px-4 flex justify-between max-[351px]:flex-col relative">
+      <nav class="py-6 px-4 flex justify-between max-[330px]:flex-col relative">
         <a href="index.html">
         <img class="" src="/Weather-app/assets/logo-hk6Dn71M.svg" alt="Weather Now Home" width="180" height="50">
         </a>
@@ -19,7 +19,7 @@
          hover:bg-neutral-700 cursor-pointer self-end
         after:inline-block after:h-6 after:content-[url('/assets/images/icon-dropdown.svg')]
         before:inline-block before:h-5 before:content-[url('/assets/images/icon-units.svg')]">Units</button>
-        <div class="absolute right-4 mt-13 max-[351px]:mt-22 select-none">
+        <div class="absolute right-4 mt-13 max-[330px]:mt-22 select-none z-0">
           <div id="menu" class="bg-neutral-800 opacity-0 invisible pointer-events-none
           transition-all duration-250 transform -translate-y-4 ease-out 
            px-2 py-1 rounded-lg border-b-2 border-neutral-700">
@@ -77,7 +77,23 @@
       </nav>
     </header>
 
-</div>
+    <main class="max-w-[1400px] mx-auto">
+      <div class="px-4 py-6 flex flex-col items-center gap-14">
+        <h1 class="font-bricolage-bold text-6xl max-[366px]:text-5xl text-center">How's the sky looking today</h1>
+        <div id="searchIn" class="flex flex-col md:flex-row gap-3 w-full z-10 md:max-w-[750px]">
+          <div class="bg-neutral-800 flex gap-2 pl-2 rounded-lg flex-1">
+            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='21'%20height='21'%20fill='none'%20viewBox='0%200%2021%2021'%3e%3cpath%20fill='%23D4D3D9'%20d='M19.844%2018.82c.195.196.195.508%200%20.664l-.899.899c-.156.195-.468.195-.664%200l-4.726-4.727a.63.63%200%200%201-.117-.351v-.508c-1.446%201.21-3.282%201.953-5.313%201.953A8.119%208.119%200%200%201%200%208.625C0%204.172%203.633.5%208.125.5c4.453%200%208.125%203.672%208.125%208.125%200%202.031-.781%203.906-1.992%205.313h.508c.117%200%20.234.078.351.156l4.727%204.726ZM8.125%2014.875a6.243%206.243%200%200%200%206.25-6.25c0-3.438-2.813-6.25-6.25-6.25a6.243%206.243%200%200%200-6.25%206.25%206.219%206.219%200%200%200%206.25%206.25Z'/%3e%3c/svg%3e" width="24" alt="Search Icon">
+            <input type="text" name="" id="" placeholder="Search for a place..."
+            class="w-full appearance-none focus:outline-none py-3 text-lg placeholder:text-neutral-100">
+          </div>
+            <button class="bg-blue-500 py-3 rounded-lg text-lg cursor-pointer md:w-28">Search</button>
+        </div>
+      </div>
+
+      
+
+    </main>
+
 
 
     
