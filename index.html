@@ -5,12 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>main</title>
-    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
   </head>
   <body class="bg-neutral-900 text-neutral-0 font-Dmsans-variable">
 
     <header class="max-w-[1400px] mx-auto font-medium">
-      <nav class="py-4 px-4 flex justify-between max-[351px]:flex-col relative">
+      <nav class="py-6 px-4 flex justify-between max-[330px]:flex-col relative">
         <a href="index.html">
         <img class="" src="./assets/images/logo.svg" alt="Weather Now Home" width="180" height="50">
         </a>
@@ -18,7 +18,7 @@
          hover:bg-neutral-700 cursor-pointer self-end
         after:inline-block after:h-6 after:content-[url('/assets/images/icon-dropdown.svg')]
         before:inline-block before:h-5 before:content-[url('/assets/images/icon-units.svg')]">Units</button>
-        <div class="absolute right-4 mt-13 max-[351px]:mt-22 select-none">
+        <div class="absolute right-4 mt-13 max-[330px]:mt-22 select-none z-0">
           <div id="menu" class="bg-neutral-800 opacity-0 invisible pointer-events-none
           transition-all duration-250 transform -translate-y-4 ease-out 
            px-2 py-1 rounded-lg border-b-2 border-neutral-700">
@@ -76,12 +76,28 @@
       </nav>
     </header>
 
-</div>
+    <main class="max-w-[1400px] mx-auto">
+      <div class="px-4 py-6 flex flex-col items-center gap-14">
+        <h1 class="font-bricolage-bold text-6xl max-[366px]:text-5xl text-center">How's the sky looking today</h1>
+        <div id="searchIn" class="flex flex-col md:flex-row gap-3 w-full z-10 md:max-w-[750px]">
+          <div class="bg-neutral-800 flex gap-2 pl-2 rounded-lg flex-1">
+            <img src="./assets/images/icon-search.svg" width="24" alt="Search Icon">
+            <input type="text" name="" id="" placeholder="Search for a place..."
+            class="w-full appearance-none focus:outline-none py-3 text-lg placeholder:text-neutral-100">
+          </div>
+            <button class="bg-blue-500 py-3 rounded-lg text-lg cursor-pointer md:w-28">Search</button>
+        </div>
+      </div>
+
+      
+
+    </main>
+
 
 
     
 
 
-    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./scripts/uiController.js"></script>
   </body>
 </html>

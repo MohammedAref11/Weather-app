@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview", 
     "predeploy": "npm run build", 
-    "deploy": "gh-pages -d dist -m \"fixed dropdown menu bug via adding type `module' to script file on index.html\""
+    "deploy": "gh-pages -d dist -m \"added heading text and search input  and modified files structure\""
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
