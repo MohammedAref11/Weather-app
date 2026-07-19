@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview", 
     "predeploy": "npm run build", 
-    "deploy": "gh-pages -d dist -m \"added heading text and search input and modified files structure\""
+    "deploy": "gh-pages -d dist -m \"finsihed styling daily forcast section\""
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
