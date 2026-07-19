@@ -24,8 +24,8 @@
            px-2 py-1 rounded-lg border-b-2 border-neutral-700">
             <button class="bg-neutral-800 pr-11 py-2 pl-2 flex gap-1 rounded-lg hover:bg-neutral-700 cursor-pointer">Swtich to Imperial</button>
 
-            <fieldset>
-              <legend class="text-neutral-300 pl-1">Temperature</legend>
+            <fieldset class="border-b border-b-neutral-600">
+              <legend class="text-neutral-300 pl-1 py-1">Temperature</legend>
               <div class="pl-2 flex rounded-lg hover:bg-neutral-700">
                 <input class="peer appearance-none" type="radio" name="temp" id="cel" value="celsius" checked>
                 <label class="py-2 flex justify-between after:px-2 cursor-pointer
@@ -40,8 +40,8 @@
               </div>
             </fieldset>
 
-            <fieldset>
-              <legend class="text-neutral-300 pl-1">Wind Speed</legend>
+            <fieldset class="border-b border-b-neutral-600">
+              <legend class="text-neutral-300 pl-1 py-1">Wind Speed</legend>
               <div class="pl-2 flex rounded-lg hover:bg-neutral-700">
                 <input class="peer appearance-none" type="radio" name="wind" id="km" value="km/h" checked>
                 <label class="py-2 flex justify-between after:px-2 cursor-pointer
@@ -88,14 +88,14 @@
             <button class="bg-blue-500 py-3 rounded-lg text-lg cursor-pointer md:w-28">Search</button>
         </div>
       </div>
-
-        <div class="px-4 py-8">
+ 
+      <div class="px-4 py-8">
           
           <section class="max-sm:bg-[url('/assets/images/bg-today-small.svg')] 
-          sm:bg-[url('/assets/images/bg-today-large.svg')]
-          bg-center bg-no-repeat bg-cover rounded-lg w-full flex flex-col 
-          md:flex-row md:px-6 px-2 py-5
-          justify-center md:justify-between items-center">
+              sm:bg-[url('/assets/images/bg-today-large.svg')]
+              bg-center bg-no-repeat bg-cover rounded-lg w-full flex flex-col 
+              md:flex-row md:px-6 px-2 py-5
+              justify-center md:justify-between items-center">
             <div>
               <h2 class="text-2xl font-semibold">Berlin, Germany</h2>
               <p class="text-lg text-neutral-200">Tuesday, Aug 5, 2025</p>
@@ -130,7 +130,7 @@
           </section>
 
 
-          <section>
+          <section class="">
             <h2 class="font-semibold py-3">Daily forcast</h2>
             <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
               <div class="bg-neutral-800 text-center space-y-2 p-4 rounded-lg border border-neutral-700">
@@ -150,7 +150,7 @@
                 </div>
               </div>
               <div class="bg-neutral-800 text-center space-y-2 p-4 rounded-lg border border-neutral-700">
-                <span>Thu</span>
+                <span class="font-medium">Thu</span>
                 <img src="./assets/images/icon-sunny.webp" alt="">
                 <div class="flex justify-between">
                   <span>20&deg;</span>
@@ -158,7 +158,7 @@
                 </div>
               </div>
               <div class="bg-neutral-800 text-center space-y-2 p-4 rounded-lg border border-neutral-700">
-                <span>Fri</span>
+                <span class="font-medium">Fri</span>
                 <img src="./assets/images/icon-partly-cloudy.webp" alt="">
                 <div class="flex justify-between">
                   <span>20&deg;</span>
@@ -166,7 +166,7 @@
                 </div>
               </div>
               <div class="bg-neutral-800 text-center space-y-2 p-4 rounded-lg border border-neutral-700">
-                <span>sat</span>
+                <span class="font-medium">sat</span>
                 <img src="./assets/images/icon-storm.webp" alt="">
                 <div class="flex justify-between">
                   <span>20&deg;</span>
@@ -174,7 +174,7 @@
                 </div>
               </div>
               <div class="bg-neutral-800 text-center space-y-2 p-4 rounded-lg border border-neutral-700">
-                <span>Sun</span>
+                <span class="font-medium">Sun</span>
                 <img src="./assets/images/icon-snow.webp" alt="">
                 <div class="flex justify-between">
                   <span>20&deg;</span>
@@ -182,7 +182,7 @@
                 </div>
               </div>
               <div class="bg-neutral-800 text-center space-y-2 p-4 rounded-lg border border-neutral-700">
-                <span>Mon</span>
+                <span class="font-medium">Mon</span>
                 <img src="./assets/images/icon-fog.webp" alt="">
                 <div class="flex justify-between">
                   <span>20&deg;</span>
@@ -192,9 +192,98 @@
             </div>
           </section>
 
-        </div>
 
+        <aside class="bg-neutral-800 my-4 rounded-lg py-1 relative">
+          <div class="flex items-center justify-between px-4 py-2">
+            <h2 class="text-lg font-medium">Hourly forecast</h2>
+            <button id="switchWeekBtn" class="bg-neutral-700 px-5 py-2 flex gap-1 items-center rounded-lg
+                hover:bg-neutral-600 cursor-pointer font-medium
+                after:content-[url(/assets/images/icon-dropdown.svg)]">
+                  Tuesday
+                </button>
+          </div>
+          <div id="forecastMenu" class="bg-neutral-800 font-medium opacity-0 invisible pointer-events-none
+          transition-all duration-250 transform -translate-y-4 ease-out 
+           px-2 py-1 rounded-lg border border-neutral-600 absolute right-5 flex flex-col">
+            <button class="text-start py-2.5 pl-1 pr-20 rounded-lg cursor-pointer hover:bg-neutral-600">Monday</button>
+            <button class="text-start py-2.5 pl-1 pr-20 rounded-lg cursor-pointer hover:bg-neutral-600">Tuesday</button>
+            <button class="text-start py-2.5 pl-1 pr-20 rounded-lg cursor-pointer hover:bg-neutral-600">Wednesday</button>
+            <button class="text-start py-2.5 pl-1 pr-20 rounded-lg cursor-pointer hover:bg-neutral-600">Thursday</button>
+            <button class="text-start py-2.5 pl-1 pr-20 rounded-lg cursor-pointer hover:bg-neutral-600">Friday</button>
+            <button class="text-start py-2.5 pl-1 pr-20 rounded-lg cursor-pointer hover:bg-neutral-600">Saturday</button>
+            <button class="text-start py-2.5 pl-1 pr-20 rounded-lg cursor-pointer hover:bg-neutral-600">Sunday</button>
+          </div>
+          <ul class="px-4 py-2 grid gap-3">
+              <li class="flex rounded-lg items-center justify-between
+              bg-neutral-700 px-3 py-2 border border-neutral-600">
+                <div class="flex items-center gap-2">              
+                  <img src="./assets/images/icon-overcast.webp" alt="" width="40">
+                  <span class="text-lg font-medium">3 PM</span>
+                </div>
+                <span class="font-medium">20&deg;</span>
+              </li>
+              <li class="flex rounded-lg items-center justify-between
+              bg-neutral-700 px-3 py-2 border border-neutral-600">
+                <div class="flex items-center gap-2">              
+                  <img src="./assets/images/icon-partly-cloudy.webp" alt="" width="40">
+                  <span class="text-lg font-medium">4 PM</span>
+                </div>
+                <span class="font-medium">20&deg;</span>
+              </li>
+              <li class="flex rounded-lg items-center justify-between
+              bg-neutral-700 px-3 py-2 border border-neutral-600">
+                <div class="flex items-center gap-2">              
+                  <img src="./assets/images/icon-sunny.webp" alt="" width="40">
+                  <span class="text-lg font-medium">5 PM</span>
+                </div>
+                <span class="font-medium">20&deg;</span>
+              </li>
+              <li class="flex rounded-lg items-center justify-between
+              bg-neutral-700 px-3 py-2 border border-neutral-600">
+                <div class="flex items-center gap-2">              
+                  <img src="./assets/images/icon-overcast.webp" alt="" width="40">
+                  <span class="text-lg font-medium">6 PM</span>
+                </div>
+                <span class="font-medium">19&deg;</span>
+              </li>
+              <li class="flex rounded-lg items-center justify-between
+              bg-neutral-700 px-3 py-2 border border-neutral-600">
+                <div class="flex items-center gap-2">              
+                  <img src="./assets/images/icon-snow.webp" alt="" width="40">
+                  <span class="text-lg font-medium">7 PM</span>
+                </div>
+                <span class="font-medium">18&deg;</span>
+              </li>
+              <li class="flex rounded-lg items-center justify-between
+              bg-neutral-700 px-3 py-2 border border-neutral-600">
+                <div class="flex items-center gap-2">              
+                  <img src="./assets/images/icon-fog.webp" alt="" width="40">
+                  <span class="text-lg font-medium">8 PM</span>
+                </div>
+                <span class="font-medium">18&deg;</span>
+              </li>
+              <li class="flex rounded-lg items-center justify-between
+              bg-neutral-700 px-3 py-2 border border-neutral-600">
+                <div class="flex items-center gap-2">              
+                  <img src="./assets/images/icon-snow.webp" alt="" width="40">
+                  <span class="text-lg font-medium">9 PM</span>
+                </div>
+                <span class="font-medium">17&deg;</span>
+              </li>
+              <li class="flex rounded-lg items-center justify-between
+              bg-neutral-700 px-3 py-2 border border-neutral-600">
+                <div class="flex items-center gap-2">              
+                  <img src="./assets/images/icon-overcast.webp" alt="" width="40">
+                  <span class="text-lg font-medium">10 PM</span>
+                </div>
+                <span class="font-medium">17&deg;</span>
+              </li>
+          </ul>
+        </aside>
+      </div>
     </main>
+
+
 
 
 
