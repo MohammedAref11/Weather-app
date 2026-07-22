@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview", 
     "predeploy": "npm run build", 
-    "deploy": "gh-pages -d dist -m \"finsihed styling daily forcast section\""
+    "deploy": "gh-pages -d dist -m \"styled grid layout for desktop screens and added hover state animations\""
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",

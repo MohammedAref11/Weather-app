@@ -1,4 +1,6 @@
-const dropDownMenu = document.getElementById("menu"); 
+const dropDownMenu = document.getElementById("menu");
+const unitsItems = document.getElementById("unitsItems"); 
+console.log(unitsItems); 
 const unitsBtn = document.getElementById("unitsBtn"); 
 const switchWeekBtn = document.getElementById("switchWeekBtn");
 const searchInput = document.getElementById("searchIn"); 
@@ -13,7 +15,8 @@ unitsBtn.addEventListener("click", () => {
     dropDownMenu.classList.toggle("-translate-y-4");
     dropDownMenu.classList.toggle("-translate-y-0");
     dropDownMenu.classList.toggle("pointer-events-none");
-    searchInput.classList.toggle("z-10"); 
+    unitsItems.classList.toggle("-z-40"); 
+    unitsItems.classList.toggle("z-10"); 
 }); 
 
 forcastBtn.addEventListener("click", () => { 
