@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview", 
-    "predeploy": "npm run build", 
+    "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist -m \"styled grid layout for desktop screens and added hover state animations\""
   },
   "devDependencies": {
@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
     "tailwindcss": "^4.3.2"
   }
 }

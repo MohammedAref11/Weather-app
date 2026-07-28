@@ -1,6 +1,5 @@
 const dropDownMenu = document.getElementById("menu");
 const unitsItems = document.getElementById("unitsItems"); 
-console.log(unitsItems); 
 const unitsBtn = document.getElementById("unitsBtn"); 
 const switchWeekBtn = document.getElementById("switchWeekBtn");
 const searchInput = document.getElementById("searchIn"); 
