@@ -1,13 +1,13 @@
-import { getData } from "./api.js";
+import { dataBasic } from "./api.js";
 
 const dateEl = document.getElementById("dateEl"); 
 const tempEl = document.getElementById("tempEl"); 
 const countryEl = document.getElementById("countryEl"); 
 
-const reagionName = new Intl.DisplayNames(["en"], {type: "region"})
 
-async function renderData() {
-    const data = await getData("berlin"); 
+async function renderBasic() {
+    const data = await dataBasic("berlin"); 
+    const reagionName = new Intl.DisplayNames(["en"], {type: "region"})
     const date = new Date().toLocaleDateString('en', { weekday: "long",
         year: "numeric",
         month: "short",
@@ -18,6 +18,6 @@ async function renderData() {
     console.log(data)
 }
 
-renderData()
+renderBasic()
 
 

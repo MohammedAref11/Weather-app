@@ -1,6 +1,6 @@
 const apiKey = import.meta.env.VITE_API_KEY; 
 
-export async function getData(cityName) { 
+export async function dataBasic(cityName) { 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`; 
     try { 
         const response = await fetch(url);
