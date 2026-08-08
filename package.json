@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -m \"configured and made sure that it renders basic weather data and date\""
+    "deploy": "gh-pages -d dist -m \"added event listeners that can handle user input and show city weather result\""
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",

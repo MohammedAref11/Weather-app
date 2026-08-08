@@ -14,5 +14,21 @@ export async function dataBasic(cityName) {
     }
 }
 
+export async function geoReverse(lat, lon) { 
+    const url = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${apiKey}`; 
+    try { 
+        const response = await fetch(url); 
+        if (!response.ok) { 
+            throw new Error(`Response status ${response.status}`)
+        } else { 
+            const result = await response.json()
+            return result
+        }
+    } catch(error) { 
+        return error.message
+    }
+}
+
+
 
 

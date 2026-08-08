@@ -54,7 +54,7 @@
                 <input class="peer appearance-none" type="radio" name="wind" id="mph" value="mph">
                 <label class="py-2 flex justify-between after:px-2 cursor-pointer 
                 after:content-[url('/assets/images/icon-checkmark.svg')] w-full after:invisible
-                peer-checked:after:visible" for="mph">Fehrenheit (&deg;F)</label>
+                peer-checked:after:visible" for="mph">mph</label>
               </div>
             </fieldset>
 
@@ -84,7 +84,7 @@
         <div id="searchIn" class="flex flex-col md:flex-row gap-3 w-full md:max-w-[750px]">
           <div class="bg-neutral-800 flex gap-2 pl-2 rounded-lg flex-1">
             <img src="./assets/images/icon-search.svg" width="24" alt="Search Icon">
-            <input type="text" name="" id="" placeholder="Search for a place..."
+            <input type="text" name="" id="cityInput" placeholder="Search for a place..."
             class="w-full appearance-none focus:outline-none py-3 text-lg placeholder:text-neutral-100">
           </div>
             <button class="bg-blue-500 py-3 rounded-lg text-lg cursor-pointer md:w-28 hover:bg-blue-700 duration-200">Search</button>
@@ -102,8 +102,8 @@
               <h2 id="countryEl" class="text-2xl font-semibold"></h2>
               <p id="dateEl" class="text-lg text-neutral-200"></p>
             </div>
-            <div class="flex justify-center items-center gap-3 flex-wrap">
-              <img src="./assets/images/icon-sunny.webp" width="150" height="150" alt="">
+            <div class="flex justify-center items-center flex-wrap">
+              <img id="weatherIcon" src="" width="150" height="150" alt="">
               <h3 id="tempEl" class="text-7xl font-Dmsans-Italic"></h3>
             </div>
           </section>
@@ -112,22 +112,22 @@
             <div class="bg-neutral-800 space-y-2 p-4 rounded-lg border
             border-neutral-700">
               <p class="text-lg text-neutral-200">Feels Like</p>
-              <p class="text-3xl">18&deg;</p>
+              <p id="feelsLike" class="text-3xl">18&deg;</p>
             </div>
             <div class="bg-neutral-800 space-y-2 p-4 rounded-lg border
             border-neutral-700">
               <p class="text-lg text-neutral-200">Humidity</p>
-              <p class="text-3xl">46%</p>
+              <p id="humidity" class="text-3xl">46%</p>
             </div>
             <div class="bg-neutral-800 space-y-2 p-4 rounded-lg border
             border-neutral-700">
               <p class="text-lg text-neutral-200">Wind</p>
-              <p class="text-3xl">14 km/h</p>
+              <p id="wind" class="text-3xl">14 km/h</p>
             </div>
             <div class="bg-neutral-800 space-y-2 p-4 rounded-lg border
             border-neutral-700">
               <p class="text-lg text-neutral-200">Precipitation</p>
-              <p class="text-3xl">0 mm</p>
+              <p id="precipitation" class="text-3xl">0 mm</p>
             </div>
           </section>
 
